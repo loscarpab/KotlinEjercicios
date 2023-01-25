@@ -1,4 +1,4 @@
-package POO.ejercicio5_11
+package POO.ejercicio5_11_libreria
 
 class libro (titulo: String, autor: String, num_pag: Int, calificacion: Int){
     var titulo = titulo

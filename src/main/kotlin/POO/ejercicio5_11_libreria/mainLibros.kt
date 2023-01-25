@@ -1,4 +1,4 @@
-package POO.ejercicio5_11
+package POO.ejercicio5_11_libreria
 
 fun main(){
     var libro1: libro = libro("hola","yo",120,10)

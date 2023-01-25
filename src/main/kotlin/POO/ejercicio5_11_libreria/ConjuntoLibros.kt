@@ -1,4 +1,4 @@
-package POO.ejercicio5_11
+package POO.ejercicio5_11_libreria
 
 class ConjuntoLibros{
     var conjunto = mutableListOf<libro>()
