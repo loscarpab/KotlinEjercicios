@@ -5,7 +5,7 @@ fun main(){
     var libro2: libro = libro("hola2","yo",120,4)
     var libro3: libro = libro("hola","yo",120,10)
     var libro4: libro = libro("hola3","mipadre",120,7)
-    var libreria = ConjuntoLibros()
+    var libreria = ConjuntoLibros(5)
     libreria.AnadirLibro(libro1)
     libreria.AnadirLibro(libro2)
     libreria.AnadirLibro(libro3)
