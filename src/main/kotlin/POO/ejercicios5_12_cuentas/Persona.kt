@@ -1,8 +1,8 @@
 package POO.ejercicios5_12_cuentas
 
-class Persona(dni: String, cuentas: MutableList<Cuenta>) {
+class Persona(dni: String, listaCuentas: MutableList<Cuenta>) {
     var dni = dni
-    var cuentas = cuentas
+    var cuentas = listaCuentas
     val maxCuentas = 3
 
     fun anadirCuenta(nuevaCuenta: Cuenta){
