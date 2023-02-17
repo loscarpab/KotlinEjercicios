@@ -1,29 +1,30 @@
 package poo.alquilerVehiculos
 
-abstract class Vehiculo(matricula: String, duracion: Int){
-    var matricula = matricula
+abstract class Vehiculo{
+    protected var matricula = "AAAA000"
         get() {
             return field
         }
         set(value) {
-            field = value
-            while (!comprobarMatricula(field)){
-                println("Matricula erronea")
-                readln()
+            var matri = value
+            while (!comprobarMatricula(matri)){
+                println("Matricula erronea. Vuelve a introducir la matricula")
+                matri = readln()
             }
+            field = value
         }
-    var duracion = duracion
+     protected var duracion = 1
         get() {
             return field
         }
         set(value) {
             field = value
             while (field < 0){
-                println("Duracion erronea")
+                println("Duracion erronea. Vuelve a introducir la duración")
                 readln()
             }
         }
-    constructor():this("AAAA000", 0)
+
     abstract fun alquiler():Double
     abstract fun recibo()
 

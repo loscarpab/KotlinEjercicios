@@ -1,12 +1,15 @@
 package poo.alquilerVehiculos
 
-class Coche(matriculaCoche: String, duracionCoche: Int, plazasCoche: Int):VehiculoTransporte() {
-    init {
-        this.matricula = matriculaCoche
-        this.duracion = duracionCoche
-        this.numPlazas = plazasCoche
-    }
-    constructor():this("AAAA000", 0, 2)
+class Coche():VehiculoTransporte() {
+        init {
+            println("Introduce la matrícula")
+            this.matricula = readln()
+            println("Introduce la duración")
+            this.duracion = readln().toInt()
+            println("Introduce el numero de plazas")
+            this.numPlazas = readln().toInt()
+        }
+
 
     override fun recibo() {
         println("------------------")

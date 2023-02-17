@@ -1,7 +1,7 @@
 package poo.alquilerVehiculos
 
-abstract class VehiculoCarga(matriculaC:String, duracionC:Int, tara: Int):Vehiculo() {
-    var tara = tara
+abstract class VehiculoCarga:Vehiculo() {
+    protected var tara = 1
         get(){
             return field
         }
@@ -12,11 +12,7 @@ abstract class VehiculoCarga(matriculaC:String, duracionC:Int, tara: Int):Vehicu
                 readln()
             }
         }
-    init {
-        this.matricula = matriculaC
-        this.duracion = duracionC
-    }
-    constructor():this("", 0, 0)
+
     abstract override fun alquiler(): Double
     override fun recibo() {
         println("Matricula: ${matricula}\nDuración: ${duracion} dias\nPlazas:${tara} Toneladas\nImporte:${alquiler()}")
