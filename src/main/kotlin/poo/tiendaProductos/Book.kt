@@ -1,6 +1,7 @@
 package poo.tiendaProductos
 
-class Book(var publisher:String,var yearPublished:Int, regularPrice:Double):Product(regularPrice) {
+class Book(var publisher:String, iva:Int,var yearPublished:Int, regularPrice:Double):Product(regularPrice, iva) {
+
     override fun computeSalePrice(): Double {
         return this.regularPrice * 0.5
     }

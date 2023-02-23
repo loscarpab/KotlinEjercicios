@@ -1,8 +1,14 @@
 package poo.ejercicios5_12_cuentas
 
-class Cuenta(numeroCuentac: Int, saldoDisponiblec: Double) {
-    var numeroCuenta: Int = numeroCuentac
+class Cuenta(saldoDisponiblec: Double) {
+    var numeroCuenta: Int = numCuentaPred
     var saldoDisponible: Double = saldoDisponiblec
+    companion object{
+        var numCuentaPred = 21000001
+    }
+    init {
+        numCuentaPred++
+    }
     fun consultarSaldo(){
         println("Saldo ---> $saldoDisponible")
     }

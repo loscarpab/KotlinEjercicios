@@ -1,6 +1,7 @@
 package poo.tiendaProductos
 
-class Camera(regularPrice: Double, manufacturer: String): Product(regularPrice) {
+class Camera(regularPrice: Double, iva:Int, manufacturer: String): Electronics(regularPrice, iva, manufacturer) {
+
     override fun computeSalePrice(): Double {
         return this.regularPrice * 0.8
     }

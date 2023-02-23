@@ -1,6 +1,7 @@
 package poo.tiendaProductos
 
-class MP3Player(regularPrice:Double, manufacturer:String, var color:String):Electronics(regularPrice, manufacturer) {
+class MP3Player(regularPrice:Double, iva:Int, manufacturer:String,  var color:String):Electronics(regularPrice, iva, manufacturer) {
+
     override fun computeSalePrice(): Double {
         return this.regularPrice * 0.9
     }
