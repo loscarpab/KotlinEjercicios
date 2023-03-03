@@ -1,12 +1,13 @@
 package poo.tiendaProductos
 
-abstract class Product(regularInitialPrice: Double, iva:Int) {
+import poo.pruebaLinea.RelationInterface
+import poo.tiendaProductosInterface.ProductInterface
+
+
+abstract class Product(regularInitialPrice: Double, iva:Int):ProductInterface, RelationInterface {
 
     var regularPrice:Double = regularInitialPrice
     var iva = iva
-        get(){
-            return field
-        }
         set(value){
             var ivaIntroducido = value
             while (ivaIntroducido !in tramosIVA){
@@ -24,7 +25,9 @@ abstract class Product(regularInitialPrice: Double, iva:Int) {
         numProductoContador++
         this.iva = iva
     }
-    abstract fun computeSalePrice():Double
+    override fun computeSalePrice():Double{
+        return 0.0
+    }
     abstract fun computeSpecialCustomerPrice():Double
     override fun toString(): String {
         return "Product(regularPrice=$regularPrice)"
@@ -32,4 +35,26 @@ abstract class Product(regularInitialPrice: Double, iva:Int) {
     fun ultimoObjeto():Int{
         return numProductoContador
     }
+
+    override fun gettRegularPrice(): Double {
+        return regularPrice
+    }
+
+    override fun settRegularPrice(regularPrice: Double) {
+        this.regularPrice = regularPrice
+    }
+
+    override fun isEqual(otro: Any): Boolean {
+        otro as Product
+        return otro.regularPrice == this.regularPrice
+    }
+    override fun isLess(otro: Any): Boolean {
+        otro as Product
+        return otro.regularPrice > this.regularPrice
+    }
+    override fun isGreater(otro: Any): Boolean {
+        otro as Product
+        return otro.regularPrice < this.regularPrice
+    }
+
 }

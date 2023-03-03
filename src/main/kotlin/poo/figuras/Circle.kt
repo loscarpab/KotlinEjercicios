@@ -14,7 +14,7 @@ class Circle(radio:Double): Shape(), Printable {
     }
 
     override fun printScreen() {
-        TODO("Not yet implemented")
+
     }
 
 }
