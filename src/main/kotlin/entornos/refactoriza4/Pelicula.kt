@@ -1,5 +1,8 @@
-package entornos.refactoriza4
+package VideoClub
 
-abstract class Pelicula(val titulo: String) {
-    abstract fun calcularPrecio()
+abstract class Pelicula(var titulo:String, diasAlquiler: Int) {
+
+    abstract fun extracto(cliente: Cliente): Double
+
+    abstract fun puntosAlquiler(): Int
 }
