@@ -1,7 +1,7 @@
 package poo.alquilerVehiculos
 
 abstract class Vehiculo{
-    protected var matricula = "AAAA000"
+    protected var matricula = "5555AAA"
         get() {
             return field
         }
@@ -35,15 +35,21 @@ abstract class Vehiculo{
             for (indice in 0..matricula.length-1){
                 //comprobar parte de letras
                 if(indice<4){
-                    if(matricula[indice] in 'A'..'Z') continue
+                    if(matricula[indice] in '0'..'9') continue
                     else return false
                 }
                 else{
-                    if (matricula[indice] in '0'..'9') continue
+                    if (matricula[indice] in 'A'..'Z') continue
                     else return false
                 }
             }
             return true
         }
     }
+
+    override fun toString(): String {
+        return "matricula='$matricula', duracion=$duracion "
+    }
+
+
 }

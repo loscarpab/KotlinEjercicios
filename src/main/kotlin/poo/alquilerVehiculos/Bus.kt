@@ -20,4 +20,8 @@ class Bus() : VehiculoTransporte() {
     override fun alquiler(): Double {
         return ((this.duracion*50)+((1.5*this.numPlazas)*this.duracion)+(2*this.numPlazas))
     }
+    override fun toString(): String {
+        println("Bus")
+        return super.toString()
+    }
 }

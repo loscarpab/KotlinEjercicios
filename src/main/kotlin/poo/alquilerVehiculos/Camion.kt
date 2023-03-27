@@ -21,4 +21,9 @@ class Camion():VehiculoCarga()  {
     override fun alquiler(): Double {
         return ((50*this.duracion) + (20*this.tara) + 40)*1.00
     }
+
+    override fun toString(): String {
+        println("Camion")
+        return super.toString()
+    }
 }

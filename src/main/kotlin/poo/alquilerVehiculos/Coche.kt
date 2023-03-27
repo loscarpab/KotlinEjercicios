@@ -21,4 +21,7 @@ class Coche():VehiculoTransporte() {
     override fun alquiler(): Double {
         return ((this.duracion*50)+((1.5*this.numPlazas)*this.duracion))
     }
+    override fun toString(): String {
+        return "COCHE\n${super.toString()}"
+    }
 }

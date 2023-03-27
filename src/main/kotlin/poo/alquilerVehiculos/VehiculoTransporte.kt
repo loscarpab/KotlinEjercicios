@@ -18,4 +18,9 @@ abstract class VehiculoTransporte:Vehiculo() {
         println("Matricula: ${matricula}\nDuración: ${duracion} dias\nPlazas:${numPlazas}\nImporte:${alquiler()}")
     }
 
+    override fun toString(): String {
+        return "${super.toString()}numPlazas=$numPlazas"
+    }
+
+
 }
