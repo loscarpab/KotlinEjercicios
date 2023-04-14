@@ -19,7 +19,7 @@ abstract class VehiculoTransporte:Vehiculo() {
     }
 
     override fun toString(): String {
-        return "${super.toString()}numPlazas=$numPlazas"
+        return "${super.toString()}, numPlazas=$numPlazas"
     }
 
 
